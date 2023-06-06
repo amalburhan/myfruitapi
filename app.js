@@ -12,6 +12,8 @@ const app = express();
 app.use('/fruits', express.json()); //only will work with fruits section rather than whole site/app?
 // app.use(express.urlencoded({ extended: true }));
 
+app.use(cors());
+
 
 app.get("/", (req, res) => {
     res.send("Hello, this is the Fruit API home page. ");
